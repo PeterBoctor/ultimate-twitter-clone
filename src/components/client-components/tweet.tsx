@@ -9,7 +9,7 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 
 import LikeButton from "./like-button";
-import { Profile, Tweet } from "@/lib/db/schema";
+import type { Profile, Tweet } from "@/lib/db/schema";  // Use `import type` here
 
 import ReplyDialog from "./reply-dialog";
 import { useRouter } from "next/navigation";
@@ -38,7 +38,7 @@ const Tweet = async ({
 
   return (
     <>
-      <div className="border-b-[0.5px]  border-gray-600 p-2 flex space-x-4 w-full">
+      <div className="border-b-[0.5px] border-gray-600 p-2 flex space-x-4 w-full">
         <div>
           <ProfileAvatar
             username={tweet.userProfile.username}
